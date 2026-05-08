@@ -410,20 +410,40 @@ footer strong{color:#d4a055}
 }
 
 
-/* ─── VIDEOS ─── */
-.videos{background:#0f0805;padding:6rem 3rem}
-.videos-header{text-align:center;margin-bottom:4rem}
-.videos-header h2{font-size:clamp(2rem,4vw,3rem);color:#f5efe6;margin-bottom:0.8rem}
-.videos-header p{color:rgba(245,239,230,0.55);max-width:520px;margin:0 auto;line-height:1.75}
-.videos-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:1200px;margin:0 auto}
-.video-block{}
-.video-label{font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#d4a055;margin-bottom:0.8rem}
-.video-title{font-family:'Playfair Display',serif;font-size:1.3rem;color:#f5efe6;font-weight:700;margin-bottom:1rem}
-.video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000}
-.video-wrap iframe,.video-wrap video{position:absolute;top:0;left:0;width:100%;height:100%;border:none;display:block}
-.video-desc{font-size:0.82rem;color:rgba(245,239,230,0.5);margin-top:0.8rem;line-height:1.6}
 
-@media(max-width:900px){.videos-grid{grid-template-columns:1fr}.videos{padding:4rem 1.5rem}}
+/* ─── VIDEOS ─── */
+.videos{background:#0a0603;padding:0}
+.video-drone{position:relative;width:100%}
+.video-drone-wrap{position:relative;padding-bottom:46%;overflow:hidden;background:#000}
+.video-drone-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+.video-drone-caption{
+  background:#0f0805;
+  padding:2rem 3rem;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
+  border-bottom:1px solid rgba(212,160,85,0.15);
+}
+.video-drone-caption h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:#f5efe6;font-weight:700}
+.video-drone-caption p{font-size:0.82rem;color:rgba(245,239,230,0.5);max-width:500px;line-height:1.5}
+.video-tag{font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#d4a055;margin-bottom:0.3rem}
+
+.video-official{
+  background:#0f0805;
+  padding:5rem 3rem;
+  display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;
+  align-items:center;max-width:1200px;margin:0 auto;
+}
+.video-official-text .video-tag{margin-bottom:0.6rem}
+.video-official-text h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);color:#f5efe6;font-weight:700;margin-bottom:1rem;line-height:1.2}
+.video-official-text h2 em{font-style:italic;color:#d4a055}
+.video-official-text p{color:rgba(245,239,230,0.55);line-height:1.8;font-size:0.95rem;margin-bottom:1.5rem}
+.video-official-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,0.6)}
+.video-official-wrap video{position:absolute;top:0;left:0;width:100%;height:100%;display:block}
+
+@media(max-width:900px){
+  .video-drone-wrap{padding-bottom:56.25%}
+  .video-drone-caption{padding:1.5rem}
+  .video-official{grid-template-columns:1fr;gap:2.5rem;padding:4rem 1.5rem}
+}
 @media(max-width:900px){
   nav{padding:1rem 1.5rem}
   .nav-links{display:none}
@@ -452,10 +472,10 @@ footer strong{color:#d4a055}
 <nav>
   <div class="nav-logo">Domaine Pourki</div>
   <ul class="nav-links">
+    <li><a href="#videos">Vidéos</a></li>
     <li><a href="#hebergements">Hébergements</a></li>
     <li><a href="#activites">Activités</a></li>
     <li><a href="#formules">Formules</a></li>
-    <li><a href="#videos">Vidéos</a></li>
     <li><a href="#reservation">Réservation</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -503,6 +523,39 @@ footer strong{color:#d4a055}
     <span class="ticker-item">Circuit Vélo GPS</span><span class="ticker-sep"> · </span>
   </div>
 </div>
+
+
+<!-- VIDÉOS -->
+<section class="videos" id="videos">
+  <!-- DRONE: Full width -->
+  <div class="video-drone">
+    <div class="video-drone-wrap">
+      <iframe src="https://www.youtube.com/embed/VJvQcYCTKDU?rel=0&modestbranding=1&autoplay=0" title="Domaine Pourki — Vue drone" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="video-drone-caption">
+      <div>
+        <div class="video-tag">🚁 Vue drone</div>
+        <h3>Le Domaine Pourki vu du ciel</h3>
+      </div>
+      <p>Survolez les huttes Bora Bora, la plage et la rivière Richelieu — découvrez pourquoi ce lieu est unique en Montérégie.</p>
+    </div>
+  </div>
+
+  <!-- OFFICIAL VIDEO: Side by side with text -->
+  <div class="video-official">
+    <div class="video-official-text">
+      <div class="video-tag">Présentation officielle</div>
+      <h2 class="serif">Vivez l'expérience <em>Pourki</em></h2>
+      <p>Activités, ambiance, hébergements, soirées — tout ce qui rend le Domaine Pourki inoubliable pour votre club cycliste, en une seule vidéo.</p>
+      <a href="#formules" class="btn-gold">Voir les formules →</a>
+    </div>
+    <div class="video-official-wrap">
+      <video controls preload="metadata">
+        <source src="pourki_web.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
 
 <!-- INTRO -->
 <section class="intro">
@@ -614,34 +667,6 @@ footer strong{color:#d4a055}
 </section>
 
 
-<!-- VIDÉOS -->
-<section class="videos" id="videos">
-  <div class="videos-header">
-    <div class="label label-light">Découvrez le domaine</div>
-    <h2 class="serif" style="color:#f5efe6">Le Domaine Pourki <em>en vidéo</em></h2>
-    <p>Une vue d'ensemble du site et une plongée dans l'ambiance unique qui vous attend au bord de la Richelieu.</p>
-  </div>
-  <div class="videos-grid">
-    <div class="video-block">
-      <div class="video-label">Vue drone</div>
-      <div class="video-title">Le domaine vu du ciel</div>
-      <div class="video-wrap">
-        <iframe src="https://www.youtube.com/embed/VJvQcYCTKDU?rel=0&modestbranding=1" title="Domaine Pourki — Vue drone" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <p class="video-desc">Survolez le Domaine Pourki et découvrez les huttes Bora Bora, la plage et la rivière Richelieu depuis les airs.</p>
-    </div>
-    <div class="video-block">
-      <div class="video-label">Présentation officielle</div>
-      <div class="video-title">Bienvenue au Domaine Pourki</div>
-      <div class="video-wrap">
-        <video controls preload="metadata" poster="">
-          <source src="domaine_pourki_web.mp4" type="video/mp4">
-        </video>
-      </div>
-      <p class="video-desc">Découvrez l'ambiance, les installations et tout ce qui rend le Domaine Pourki unique pour votre club cycliste.</p>
-    </div>
-  </div>
-</section>
 
 <!-- FORMULES -->
 <section class="formules" id="formules">
