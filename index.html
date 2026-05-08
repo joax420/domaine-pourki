@@ -439,6 +439,28 @@ footer strong{color:#d4a055}
 .video-official-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,0.6)}
 .video-official-wrap video{position:absolute;top:0;left:0;width:100%;height:100%;display:block}
 
+
+/* ─── VIDEOS ─── */
+.videos{background:#0f0805;padding:6rem 3rem}
+.videos-header{text-align:center;margin-bottom:3.5rem}
+.videos-header h2{font-size:clamp(2rem,4vw,3rem);color:#f5efe6;margin-bottom:0.8rem}
+.videos-header p{color:rgba(245,239,230,0.5);max-width:520px;margin:0 auto;line-height:1.75;font-size:0.95rem}
+.videos-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2rem;max-width:1200px;margin:0 auto;
+}
+.video-card{background:#1a0f08}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.video-wrap video{position:absolute;top:0;left:0;width:100%;height:100%;display:block;object-fit:cover}
+.video-info{padding:1.4rem 1.6rem}
+.video-info .video-tag{font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#d4a055;margin-bottom:0.4rem}
+.video-info h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:#f5efe6;font-weight:700;margin-bottom:0.3rem}
+.video-info p{font-size:0.82rem;color:rgba(245,239,230,0.45);line-height:1.6}
+
+@media(max-width:900px){
+  .videos{padding:4rem 1.5rem}
+  .videos-grid{grid-template-columns:1fr}
+}
 @media(max-width:900px){
   .video-drone-wrap{padding-bottom:56.25%}
   .video-drone-caption{padding:1.5rem}
@@ -525,34 +547,39 @@ footer strong{color:#d4a055}
 </div>
 
 
+
+
 <!-- VIDÉOS -->
 <section class="videos" id="videos">
-  <!-- DRONE: Full width -->
-  <div class="video-drone">
-    <div class="video-drone-wrap">
-      <iframe src="https://www.youtube.com/embed/VJvQcYCTKDU?rel=0&modestbranding=1&autoplay=0" title="Domaine Pourki — Vue drone" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="video-drone-caption">
-      <div>
-        <div class="video-tag">🚁 Vue drone</div>
-        <h3>Le Domaine Pourki vu du ciel</h3>
-      </div>
-      <p>Survolez les huttes Bora Bora, la plage et la rivière Richelieu — découvrez pourquoi ce lieu est unique en Montérégie.</p>
-    </div>
+  <div class="videos-header">
+    <div class="label label-light">Découvrez le domaine</div>
+    <h2 class="serif" style="color:#f5efe6">Le Domaine Pourki <em>en vidéo</em></h2>
+    <p>Une vue aérienne du site et une plongée dans l'ambiance unique qui vous attend au bord de la Richelieu.</p>
   </div>
-
-  <!-- OFFICIAL VIDEO: Side by side with text -->
-  <div class="video-official">
-    <div class="video-official-text">
-      <div class="video-tag">Présentation officielle</div>
-      <h2 class="serif">Vivez l'expérience <em>Pourki</em></h2>
-      <p>Activités, ambiance, hébergements, soirées — tout ce qui rend le Domaine Pourki inoubliable pour votre club cycliste, en une seule vidéo.</p>
-      <a href="#formules" class="btn-gold">Voir les formules →</a>
+  <div class="videos-grid">
+    <div class="video-card">
+      <div class="video-wrap">
+        <video controls preload="metadata">
+          <source src="domaine_pourki_web.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-info">
+        <div class="video-tag">🚁 Vue drone</div>
+        <h3>Le domaine vu du ciel</h3>
+        <p>Survolez les huttes Bora Bora, la plage et la rivière Richelieu depuis les airs.</p>
+      </div>
     </div>
-    <div class="video-official-wrap">
-      <video controls preload="metadata">
-        <source src="pourki_web.mp4" type="video/mp4">
-      </video>
+    <div class="video-card">
+      <div class="video-wrap">
+        <video controls preload="metadata">
+          <source src="pourki_web.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-info">
+        <div class="video-tag">🎬 Présentation officielle</div>
+        <h3>Bienvenue au Domaine Pourki</h3>
+        <p>Activités, ambiance et hébergements — tout ce qui rend le Domaine inoubliable pour votre club.</p>
+      </div>
     </div>
   </div>
 </section>
