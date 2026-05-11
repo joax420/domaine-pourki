@@ -78,17 +78,17 @@ h2.serif em{font-style:italic;color:#d4a055}
 .heberg-header{text-align:center;margin-bottom:4rem}
 .heberg-header h2{font-size:clamp(2rem,4vw,3.2rem);color:#f5efe6;margin-bottom:0.8rem}
 .heberg-header p{color:rgba(245,239,230,0.6);max-width:560px;margin:0 auto;line-height:1.75}
-.heberg-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:1.5rem;max-width:1100px;margin:0 auto;align-items:start}
+.heberg-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:1.5rem;max-width:1100px;margin:0 auto;align-items:start;overflow:hidden}
 /* Arch top for first card */
 .heberg-card-img{width:100%;object-fit:cover;transition:transform 0.6s ease;display:block}
 .heberg-card:hover .heberg-card-img{transform:scale(1.05)}
-.heberg-card:nth-child(1){border-radius:999px 999px 24px 24px;overflow:hidden;position:relative;cursor:pointer}
-.heberg-card:nth-child(1) .heberg-card-img{height:500px}
+.heberg-card:nth-child(1){border-radius:24px;overflow:hidden;position:relative;cursor:pointer}
+.heberg-card:nth-child(1) .heberg-card-img{height:500px;border-radius:999px 999px 0 0}
 /* Rounded square for second */
 .heberg-card:nth-child(2){border-radius:24px;overflow:hidden;margin-top:3rem;position:relative;cursor:pointer}
 .heberg-card:nth-child(2) .heberg-card-img{height:260px}
 /* Landscape rounded for third */
-.heberg-card:nth-child(3){border-radius:24px;overflow:hidden;position:relative;cursor:pointer}
+.heberg-card:nth-child(3){border-radius:24px;overflow:hidden;position:relative;cursor:pointer;min-width:0}
 .heberg-card:nth-child(3) .heberg-card-img{height:210px}
 
 .heberg-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,5,2,0.85) 0%,rgba(10,5,2,0.1) 55%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.8rem}
@@ -111,23 +111,23 @@ h2.serif em{font-style:italic;color:#d4a055}
 .act-title{font-family:'Playfair Display',serif;font-size:1.15rem;color:#1c1410;font-weight:700}
 .act-desc{font-size:0.82rem;color:#7a6a5a;line-height:1.6;margin-top:0.4rem}
 /* Card 1: tall arch top */
-.act-card:nth-child(1){border-radius:999px 999px 24px 24px;grid-row:span 2}
-.act-card:nth-child(1) .act-img{height:360px}
+.act-card:nth-child(1){border-radius:24px;grid-row:span 2}
+.act-card:nth-child(1) .act-img{height:360px;border-radius:999px 999px 0 0}
 /* Card 2: rounded square */
 .act-card:nth-child(2){border-radius:24px}
 .act-card:nth-child(2) .act-img{height:200px}
 /* Card 3: arch bottom */
-.act-card:nth-child(3){border-radius:24px 24px 999px 999px}
+.act-card:nth-child(3){border-radius:24px}
 .act-card:nth-child(3) .act-img{height:220px}
 /* Card 4: rounded */
-.act-card:nth-child(4){border-radius:24px;margin-top:-2rem}
+.act-card:nth-child(4){border-radius:24px}
 .act-card:nth-child(4) .act-img{height:220px}
 /* Card 5: rounded */
 .act-card:nth-child(5){border-radius:24px}
 .act-card:nth-child(5) .act-img{height:200px}
 /* Card 6: arch top */
-.act-card:nth-child(6){border-radius:999px 999px 24px 24px}
-.act-card:nth-child(6) .act-img{height:240px}
+.act-card:nth-child(6){border-radius:24px}
+.act-card:nth-child(6) .act-img{height:240px;border-radius:999px 999px 0 0}
 
 /* FORMULES */
 .formules{background:#2a1e14;padding:7rem 3rem;position:relative;overflow:hidden}
