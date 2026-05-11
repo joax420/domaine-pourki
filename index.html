@@ -509,14 +509,62 @@ footer strong{color:#d4a055}
 .champeaux-img-accent img { border-radius: 50%; }
 
 
-/* ─── UNIFIED IMAGE SHAPES ─── */
-.heberg-card { border-radius: 16px; overflow: hidden; }
-.act-card { border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-.champeaux-img > img { border-radius: 16px; }
-.champeaux-img-accent { border-radius: 16px; overflow: hidden; width: 42%; aspect-ratio: 3/4; }
-.champeaux-img-accent img { border-radius: 16px; }
-.intro-img { border-radius: 0 16px 16px 0; overflow: hidden; }
 
+/* ─── MAGAZINE LAYOUT ─── */
+
+/* Activités: masonry-style varied proportions */
+.activites-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  gap: 1.2rem;
+  max-width: 1200px;
+}
+.act-card { position: relative; overflow: hidden; border-radius: 16px; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+
+/* Card 1: wide landscape */
+.act-card:nth-child(1) { grid-column: span 4; }
+.act-card:nth-child(1) .act-img { height: 340px; }
+
+/* Card 2: tall portrait */
+.act-card:nth-child(2) { grid-column: span 2; grid-row: span 2; }
+.act-card:nth-child(2) .act-img { height: 420px; }
+
+/* Card 3: small square-ish */
+.act-card:nth-child(3) { grid-column: span 2; }
+.act-card:nth-child(3) .act-img { height: 200px; }
+
+/* Card 4: medium */
+.act-card:nth-child(4) { grid-column: span 2; }
+.act-card:nth-child(4) .act-img { height: 200px; }
+
+/* Card 5: wide landscape */
+.act-card:nth-child(5) { grid-column: span 3; }
+.act-card:nth-child(5) .act-img { height: 260px; }
+
+/* Card 6: medium */
+.act-card:nth-child(6) { grid-column: span 3; }
+.act-card:nth-child(6) .act-img { height: 260px; }
+
+.act-img { width: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.act-card:hover .act-img { transform: scale(1.04); }
+
+/* Hébergements: first card tall portrait, others landscape */
+.heberg-card { border-radius: 16px; overflow: hidden; }
+.heberg-card:first-child .heberg-card-img { min-height: 560px; height: 100%; }
+.heberg-card:nth-child(2) .heberg-card-img { height: 200px; }
+.heberg-card:nth-child(3) .heberg-card-img { height: 356px; }
+
+/* Champeaux portrait image */
+.champeaux-img > img { border-radius: 16px; aspect-ratio: 3/4; height: auto; }
+.champeaux-img-accent { border-radius: 16px; overflow: hidden; width: 42%; aspect-ratio: 1/1; }
+.champeaux-img-accent img { border-radius: 16px; }
+
+@media(max-width:900px){
+  .activites-grid { grid-template-columns: 1fr; }
+  .act-card:nth-child(n) { grid-column: span 1; grid-row: span 1; }
+  .act-card:nth-child(n) .act-img { height: 240px; }
+}
 </style>
 </head>
 <body>
