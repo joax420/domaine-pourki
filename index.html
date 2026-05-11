@@ -152,6 +152,8 @@ h2.serif em{font-style:italic;color:#d4a055}
   background-image:url('images/image2.jpg');
   background-size:cover;background-position:center;
   position:relative;
+  border-radius:0 24px 24px 0;
+  overflow:hidden;
 }
 .intro-img::after{
   content:'';position:absolute;inset:0;
@@ -189,12 +191,14 @@ h2.serif em{font-style:italic;color:#d4a055}
 .heberg-card{
   position:relative;overflow:hidden;
   cursor:pointer;
+  border-radius:16px;
 }
 .heberg-card:first-child{grid-row:span 2;}
 .heberg-card-img{
   width:100%;height:280px;object-fit:cover;
   transition:transform 0.6s ease;
   display:block;
+  border-radius:16px;
 }
 .heberg-card:first-child .heberg-card-img{
   height:100%;min-height:562px;
@@ -230,11 +234,12 @@ h2.serif em{font-style:italic;color:#d4a055}
   gap:1.5rem;max-width:1200px;
 }
 .act-card{
-  position:relative;overflow:hidden;border-radius:0;
+  position:relative;overflow:hidden;border-radius:12px;
   background:#fff;
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
 }
 .act-card:nth-child(1){grid-column:span 2}
-.act-img{width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.5s ease}
+.act-img{width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.5s ease;border-radius:12px 12px 0 0}
 .act-card:nth-child(1) .act-img{height:360px}
 .act-card:nth-child(2) .act-img{height:200px}
 .act-card:nth-child(3) .act-img{height:310px}
@@ -323,13 +328,13 @@ h2.serif em{font-style:italic;color:#d4a055}
 .tarif-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:#d4a055;text-align:right}
 .tarif-num span{font-size:0.85rem;font-weight:400;color:rgba(245,239,230,0.5)}
 .champeaux-img{position:relative}
-.champeaux-img img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block}
+.champeaux-img img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block;border-radius:20px}
 .champeaux-img-accent{
   position:absolute;bottom:-1.5rem;left:-1.5rem;
   width:42%;aspect-ratio:4/5;
   border:8px solid #f5efe6;
 }
-.champeaux-img-accent img{width:100%;height:100%;object-fit:cover;display:block}
+.champeaux-img-accent img{width:100%;height:100%;object-fit:cover;display:block;border-radius:16px}
 
 /* ─── CONTACT ─── */
 .contact{
@@ -497,6 +502,30 @@ footer strong{color:#d4a055}
   .champeaux-img-accent{display:none}
   footer{flex-direction:column;text-align:center}
 }
+
+/* ─── VARIED IMAGE SHAPES ─── */
+
+/* Hébergements grid - mixed shapes */
+.heberg-card { border-radius: 0; overflow: hidden; }
+.heberg-card:first-child { border-radius: 24px; }
+.heberg-card:nth-child(2) { border-radius: 50% 50% 24px 24px / 40% 40% 24px 24px; overflow: hidden; }
+.heberg-card:nth-child(3) { border-radius: 24px 0 0 24px; }
+
+/* Activités - each card a different shape */
+.act-card:nth-child(1) { border-radius: 24px; }
+.act-card:nth-child(2) { border-radius: 999px; overflow: hidden; }
+.act-card:nth-child(2) .act-img { height: 280px; border-radius: 0; }
+.act-card:nth-child(2) .act-body { padding: 1.4rem 2rem; }
+.act-card:nth-child(3) { border-radius: 24px 0 24px 0; }
+.act-card:nth-child(4) { border-radius: 0 24px 0 24px; }
+.act-card:nth-child(5) { border-radius: 999px 999px 24px 24px; overflow: hidden; }
+.act-card:nth-child(6) { border-radius: 24px; }
+
+/* Champeaux - portrait + circle accent */
+.champeaux-img > img { border-radius: 200px 200px 24px 24px; }
+.champeaux-img-accent { border-radius: 50%; overflow: hidden; width: 42%; aspect-ratio: 1; }
+.champeaux-img-accent img { border-radius: 50%; }
+
 </style>
 </head>
 <body>
