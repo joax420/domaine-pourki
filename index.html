@@ -184,19 +184,23 @@ h2.serif em{font-style:italic;color:#d4a055}
 .heberg-header p{color:rgba(245,239,230,0.6);max-width:560px;margin:0 auto;line-height:1.75}
 .heberg-grid{
   display:grid;grid-template-columns:1fr 1fr;
-  gap:3px;max-width:1100px;margin:0 auto;
+  gap:2px;max-width:1100px;margin:0 auto;
 }
 .heberg-card{
   position:relative;overflow:hidden;
   cursor:pointer;
 }
 .heberg-card:first-child{grid-row:span 2;}
-.heberg-card:first-child .heberg-card-img{height:100%;min-height:540px}
 .heberg-card-img{
-  width:100%;height:100%;object-fit:cover;
+  width:100%;height:280px;object-fit:cover;
   transition:transform 0.6s ease;
   display:block;
 }
+.heberg-card:first-child .heberg-card-img{
+  height:100%;min-height:562px;
+}
+.heberg-card:nth-child(2) .heberg-card-img{height:220px;}
+.heberg-card:nth-child(3) .heberg-card-img{height:340px;}
 .heberg-card:hover .heberg-card-img{transform:scale(1.06)}
 .heberg-card-overlay{
   position:absolute;inset:0;
@@ -230,8 +234,13 @@ h2.serif em{font-style:italic;color:#d4a055}
   background:#fff;
 }
 .act-card:nth-child(1){grid-column:span 2}
-.act-img{width:100%;height:240px;object-fit:cover;display:block;transition:transform 0.5s ease;object-position:center}
-.act-card:nth-child(1) .act-img{height:320px}
+.act-img{width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.5s ease}
+.act-card:nth-child(1) .act-img{height:360px}
+.act-card:nth-child(2) .act-img{height:200px}
+.act-card:nth-child(3) .act-img{height:310px}
+.act-card:nth-child(4) .act-img{height:330px}
+.act-card:nth-child(5) .act-img{height:220px}
+.act-card:nth-child(6) .act-img{height:290px}
 .act-card:hover .act-img{transform:scale(1.04)}
 .act-body{padding:1.4rem 1.6rem}
 .act-tag{font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#d4a055;margin-bottom:0.4rem}
@@ -314,10 +323,10 @@ h2.serif em{font-style:italic;color:#d4a055}
 .tarif-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:#d4a055;text-align:right}
 .tarif-num span{font-size:0.85rem;font-weight:400;color:rgba(245,239,230,0.5)}
 .champeaux-img{position:relative}
-.champeaux-img img{width:100%;height:auto;max-height:520px;object-fit:cover;display:block;aspect-ratio:4/3}
+.champeaux-img img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block}
 .champeaux-img-accent{
   position:absolute;bottom:-1.5rem;left:-1.5rem;
-  width:45%;aspect-ratio:3/4;
+  width:42%;aspect-ratio:4/5;
   border:8px solid #f5efe6;
 }
 .champeaux-img-accent img{width:100%;height:100%;object-fit:cover;display:block}
