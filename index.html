@@ -503,28 +503,19 @@ footer strong{color:#d4a055}
   footer{flex-direction:column;text-align:center}
 }
 
-/* ─── VARIED IMAGE SHAPES ─── */
 
-/* Hébergements grid - mixed shapes */
-.heberg-card { border-radius: 0; overflow: hidden; }
-.heberg-card:first-child { border-radius: 24px; }
-.heberg-card:nth-child(2) { border-radius: 50% 50% 24px 24px / 40% 40% 24px 24px; overflow: hidden; }
-.heberg-card:nth-child(3) { border-radius: 24px 0 0 24px; }
-
-/* Activités - each card a different shape */
-.act-card:nth-child(1) { border-radius: 24px; }
-.act-card:nth-child(2) { border-radius: 999px; overflow: hidden; }
-.act-card:nth-child(2) .act-img { height: 280px; border-radius: 0; }
-.act-card:nth-child(2) .act-body { padding: 1.4rem 2rem; }
-.act-card:nth-child(3) { border-radius: 24px 0 24px 0; }
-.act-card:nth-child(4) { border-radius: 0 24px 0 24px; }
-.act-card:nth-child(5) { border-radius: 999px 999px 24px 24px; overflow: hidden; }
-.act-card:nth-child(6) { border-radius: 24px; }
-
-/* Champeaux - portrait + circle accent */
 .champeaux-img > img { border-radius: 200px 200px 24px 24px; }
 .champeaux-img-accent { border-radius: 50%; overflow: hidden; width: 42%; aspect-ratio: 1; }
 .champeaux-img-accent img { border-radius: 50%; }
+
+
+/* ─── UNIFIED IMAGE SHAPES ─── */
+.heberg-card { border-radius: 16px; overflow: hidden; }
+.act-card { border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.champeaux-img > img { border-radius: 16px; }
+.champeaux-img-accent { border-radius: 16px; overflow: hidden; width: 42%; aspect-ratio: 3/4; }
+.champeaux-img-accent img { border-radius: 16px; }
+.intro-img { border-radius: 0 16px 16px 0; overflow: hidden; }
 
 </style>
 </head>
