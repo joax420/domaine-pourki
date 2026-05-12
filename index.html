@@ -141,31 +141,119 @@ nav{
 
 /* MOBILE FIXES */
 @media(max-width:900px){
-  .nav-links{
-    display:none;
-  }
-
-  .hero{
-    padding:1.5rem;
-  }
-
-  .videos-grid{
-    grid-template-columns:1fr;
-  }
+  .nav-links{display:none;}
+  .hero{padding:1.5rem;}
+  .videos-grid{grid-template-columns:1fr;}
 }
-
 @media(max-width:500px){
-  .hero h1{
-    font-size:2rem;
-  }
-
-  .hero-desc{
-    font-size:0.9rem;
-  }
-
+  .hero h1{font-size:2rem;}
+  .hero-desc{font-size:0.9rem;}
   .btn-gold,.btn-ghost{
     width:100%;
     text-align:center;
+  }
+}
+
+/* =========================
+   ADDED GLOBAL FIXES
+========================= */
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  max-width: 100%;
+}
+
+section, div, img, video {
+  max-width: 100%;
+}
+
+.container, .wrapper, .content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.hero {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+.videos-grid,
+.grid,
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+nav {
+  width: 100%;
+}
+
+/* MOBILE ADDITIONS */
+@media (max-width: 900px) {
+
+  .videos-grid,
+  .grid,
+  .cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  .container,
+  .wrapper,
+  .content,
+  .hero {
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 6vw, 3rem) !important;
+  }
+
+  h2 {
+    font-size: 1.6rem !important;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .hero-btns,
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn,
+  .btn-gold,
+  .btn-ghost {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .container,
+  .wrapper,
+  .content,
+  .hero {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  h1 {
+    font-size: 1.8rem !important;
   }
 }
 </style>
