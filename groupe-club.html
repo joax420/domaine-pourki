@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Groupe / Club — Domaine Pourki</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{font-family:'Jost',sans-serif;background:#0b1630;color:#eef3fb;min-height:100vh}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(8,15,35,.92);border-bottom:1px solid rgba(74,159,212,.15)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:#4a9fd4;text-decoration:none;font-weight:700}
+
+.page{max-width:1000px;margin:0 auto;padding:2.5rem clamp(1.2rem,5vw,2.5rem) 4rem}
+
+.hero-card{border-radius:28px;overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;min-height:320px;box-shadow:0 24px 60px rgba(0,0,0,.35);margin-bottom:2rem}
+.hero-img{position:relative;overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,15,35,0),rgba(8,15,35,.18))}
+.hero-info{background:linear-gradient(135deg,#1a3a20 0%,#0f2215 100%);padding:2rem 2rem 2rem 1.8rem;display:flex;flex-direction:column;justify-content:center;gap:.9rem}
+.tag{display:inline-flex;align-items:center;gap:.4rem;background:rgba(74,212,144,.15);border:1px solid rgba(74,212,144,.3);border-radius:999px;padding:.3rem .8rem;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#6dffc4;width:fit-content}
+.hero-info h1{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.1;color:#eef3fb}
+.hero-info h1 em{color:#4ad490;font-style:italic}
+.hero-info p{color:rgba(220,234,255,.72);font-size:.92rem;line-height:1.6}
+
+.section-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:#eef3fb;margin-bottom:1.2rem;padding-bottom:.6rem;border-bottom:1px solid rgba(74,212,144,.2)}
+
+.activities{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}
+.act-card{background:rgba(255,255,255,.05);border:1px solid rgba(74,212,144,.12);border-radius:20px;padding:1.3rem 1.4rem;display:flex;gap:1rem;align-items:flex-start;transition:background .2s}
+.act-card:hover{background:rgba(74,212,144,.08)}
+.act-icon{font-size:1.6rem;flex-shrink:0;margin-top:.1rem}
+.act-card h3{font-size:.88rem;font-weight:800;color:#eef3fb;margin-bottom:.3rem}
+.act-card p{font-size:.8rem;color:rgba(220,234,255,.58);line-height:1.5}
+
+.mood-strip{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem}
+.mood{border-radius:20px;padding:1.4rem 1.6rem}
+.mood-sport{background:linear-gradient(135deg,#1a3a20,#0f2215)}
+.mood-event{background:linear-gradient(135deg,#1e3a1a,#0f2510)}
+.mood h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:#eef3fb;margin-bottom:.5rem}
+.mood p{font-size:.82rem;color:rgba(220,234,255,.65);line-height:1.55}
+.mood-emoji{font-size:1.8rem;margin-bottom:.6rem;display:block}
+
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.75rem 1.4rem;border-radius:999px;text-decoration:none;font-size:.78rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;transition:opacity .2s}
+.btn-primary{background:#4ad490;color:#0b2015}
+.btn-secondary{background:rgba(255,255,255,.08);color:rgba(220,234,255,.8);border:1px solid rgba(74,212,144,.22)}
+.btn:hover{opacity:.82}
+
+@media(max-width:700px){
+  .hero-card{grid-template-columns:1fr}
+  .hero-img{aspect-ratio:16/9}
+  .activities{grid-template-columns:1fr}
+  .mood-strip{grid-template-columns:1fr}
+  nav{padding:.8rem 1.2rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">← Domaine Pourki</a>
+  <span style="color:rgba(220,234,255,.4);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase">🏃 Groupe / Club</span>
+</nav>
+
+<div class="page">
+
+  <div class="hero-card">
+    <div class="hero-img">
+      <img src="images/volleyball-pourki.png" alt="Groupe jouant au volleyball dans l'eau au Domaine Pourki">
+    </div>
+    <div class="hero-info">
+      <span class="tag">🏃 Groupe · Club</span>
+      <h1>Un terrain de jeu pour <em>bouger ensemble.</em></h1>
+      <p>Pour clubs, groupes d'amis, collègues, équipes et sorties organisées au bord du Richelieu.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Ce qu'on vous propose</div>
+  <div class="activities">
+    <div class="act-card">
+      <span class="act-icon">🚴</span>
+      <div><h3>Vélo & clubs sportifs</h3><p>Stationnement, accès au site et récupération au bord de l'eau après l'effort.</p></div>
+    </div>
+    <div class="act-card">
+      <span class="act-icon">🛶</span>
+      <div><h3>Canot, kayak & pagaie</h3><p>Activités nautiques pour toute l'équipe sur la rivière Richelieu.</p></div>
+    </div>
+    <div class="act-card">
+      <span class="act-icon">🏐</span>
+      <div><h3>Volleyball & plage</h3><p>Volleyball dans l'eau, baignade et détente pour finir la journée en beauté.</p></div>
+    </div>
+    <div class="act-card">
+      <span class="act-icon">📋</span>
+      <div><h3>Organisation simplifiée</h3><p>Un endroit pratique pour rassembler et planifier une journée complète.</p></div>
+    </div>
+  </div>
+
+  <div class="section-title">Pour quel type de groupe?</div>
+  <div class="mood-strip">
+    <div class="mood mood-sport">
+      <span class="mood-emoji">🏅</span>
+      <h3>Clubs sportifs</h3>
+      <p>Course, marche, vélo, natation, kayak — toutes les sorties de club sont les bienvenues.</p>
+    </div>
+    <div class="mood mood-event">
+      <span class="mood-emoji">🎉</span>
+      <h3>Événements & équipes</h3>
+      <p>Sorties d'équipe, collègues, groupes scolaires, associations et rassemblements spéciaux.</p>
+    </div>
+  </div>
+
+  <div class="ctas">
+    <a class="btn btn-primary" href="https://www.pourki.com/contact" target="_blank">Demande de groupe</a>
+    <a class="btn btn-secondary" href="https://www.pourki.com/activites-nautiques" target="_blank">Voir les activités</a>
+    <a class="btn btn-secondary" href="index.html">Retour au site</a>
+  </div>
+
+</div>
+</body>
+</html>
